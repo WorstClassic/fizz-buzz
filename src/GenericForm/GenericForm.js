@@ -28,13 +28,10 @@ const GenericForm = ({ formSource, submitText, submitAction }) => {
                     return (<InputField
                         key={`input-${propertyName}`}
                         name={propertyName}
-                        title={entity.title || `Enter value for ${propertyName}`}
+                        title={entity.title || `${propertyName}:`}
                         value={formData[propertyName]}
-                        changeCall={e => setFormData(prev => {
-                            const update = { ...prev };
-                            update[propertyName] = e.target.value;
-                            return update
-                        })}
+                        changeCall={e => setFormData(prev => { return { ...prev, [propertyName]: e.target.value } }
+                        )}
                     />)
                 }
                 return (<></>);
