@@ -5,6 +5,10 @@ import InputField from '../InputField/InputField';
 const GenericForm = ({ formSource, submitText, submitAction }) => {
     const formInitState = {};
     const propertyNameArray = [];
+    const submitHandler = e => {
+        e.preventDefault();
+        submitAction(formData);
+    }
     formSource.forEach((entity) => {
         let tentativePropertyName = entity.name;
         while (tentativePropertyName !== undefined && tentativePropertyName !== null) {
@@ -21,7 +25,7 @@ const GenericForm = ({ formSource, submitText, submitAction }) => {
     const [formData, setFormData] = useState(formInitState);
 
     return (
-        <div>
+        <form onSubmit={submitHandler}>
             {formSource.map(entity => {
                 if (entity.name !== undefined && entity.name !== null) {
                     const propertyName = propertyNameArray.shift();
@@ -35,8 +39,8 @@ const GenericForm = ({ formSource, submitText, submitAction }) => {
                     />)
                 }
             })}
-            <button onClick={e => submitAction(formData)}>{submitText}</button>
-        </div >
+            <button type='submit' onSubmit={submitHandler} onClick={submitHandler}>{submitText}</button>
+        </form >
     );
 };
 
