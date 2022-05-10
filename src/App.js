@@ -8,7 +8,7 @@ import { homepath, reviewpath } from './Constants/Path';
 
 const App = () => {
   return (
-    <div>
+    <div className='root'>
       <Routes>
         <Route path={homepath} element={<InputPage />} />
         <Route path={reviewpath} element={<ReviewPage />} />
