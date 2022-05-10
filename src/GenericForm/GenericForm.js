@@ -34,7 +34,6 @@ const GenericForm = ({ formSource, submitText, submitAction }) => {
                         )}
                     />)
                 }
-                return (<></>);
             })}
             <button onClick={e => submitAction(formData)}>{submitText}</button>
         </div >
@@ -44,12 +43,11 @@ const GenericForm = ({ formSource, submitText, submitAction }) => {
 GenericForm.propTypes = {
     formSource: PropTypes.array.isRequired,
     submitText: PropTypes.string,
-    submitAction: PropTypes.func,
+    submitAction: PropTypes.func.isRequired,
 };
 
 GenericForm.defaultProps = {
     submitText: 'Submit',
-    submitAction: () => { },
 };
 
 export default GenericForm;

@@ -1,23 +1,35 @@
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import GenericForm from '../../GenericForm/GenericForm';
-import { FizzBuzzInputs } from '../../DataSupply/FizzBuzzInputs';
+import { RemoteDataService } from '../../DataSupply/RemoteDataService';
 import { reviewpath } from '../../Constants/Path';
+import { STACK_PTR, SUBMIT_TEXT } from '../../Constants/variable-names';
 
-const InputPage = ({ stackIndex, incrementStack }) => {
+const InputPage = () => {
 
     const navigate = useNavigate();
+    const [allLoaded, setAllLoaded] = useState(false);
+    const [inputParams, setInputParams] = useState(null);
+
+    useEffect(() => {
+        const incomingParams = RemoteDataService.getInputParams;
+        setInputParams(incomingParams);
+        setAllLoaded(true);
+        return () => {
+        }
+    }, [setInputParams, setAllLoaded])
 
     const commitToSessionStorage = (commitMe) => {
+        const stackIndex = sessionStorage.getItem(STACK_PTR) || 0;
         sessionStorage.setItem(stackIndex, JSON.stringify(commitMe));
-        incrementStack();
+        sessionStorage.setItem(STACK_PTR, parseInt(stackIndex) + 1);
         navigate(reviewpath);
     };
-    return (
+    return (allLoaded &&
         <GenericForm
-            formSource={FizzBuzzInputs}
-            submitText={'Click and Be Judged!'}
+            formSource={inputParams}
+            submitText={SUBMIT_TEXT}
             submitAction={commitToSessionStorage}
         />
     )

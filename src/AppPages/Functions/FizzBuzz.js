@@ -1,6 +1,6 @@
 const FizzBuzz = (maybeNumber) => {
     const number = parseInt(maybeNumber);
-    if (number === NaN)
+    if (isNaN(number))
         return null;
     else {
         //We could do additonal checking here
