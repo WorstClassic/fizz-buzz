@@ -1,23 +1,26 @@
 # Fizz Buzz Code Challenge  
 
 ### Installation  
-This installation guide assumes that the user has already made a copy of the [git](https://git-scm.com/) repository and installed [node package manager (npm)](https://www.npmjs.com/). Once the desired branch has been pulled down, the user should  
+This installation guide assumes that the user has already made a copy of the [git](https://git-scm.com/) repository and installed [node package manager (npm)](https://www.npmjs.com/). These scripts have not been tested against other package managers. Once the desired branch has been pulled down, the user should  
 >`npm install`  
-  
-  To install the dependencies.
+
+to install the dependencies. After dependency installation, the user may run either `npm start` to run the application in development mode, or `npm run local` to build and serve on the default port (3000).
 
 This simple webpage was built in response to a coding challenge. Although it has some obvious omissions (almost no styling) it is designed to make addressing those omissions easy. The design leaves space for/"mocks" an API call in the RemoteDataService. And, while the applications are rudimentary, the components attempt to be re-usable and demonstrate some rough understanding of being driven by API calls. It should be easy to imagine mocking up a more RESTful/HATEOAS design by moving [src/Constants/Path](./src/Constants/Path.js) data into the [RemoteDataService](./src/RemoteDataService/RemoteDataService.js).
 
 There are also stray console logs in [FizzBuzzEntryList.js](./src/FizzBuzzEntryList/FizzBuzzEntryList.js)
 
-It should have a compelling automated test suite, which generates that coveted 100% line coverage report. This coverage report can be generated using the 
-> `npm run test -- --coverage`  
+It should have a compelling automated test suite, which generates that coveted 100% line coverage report. This coverage report can be generated using
+`npm run test -- --coverage`  or using the `npm run coverage` script discussed below.
 
 command. The coverage report should be written into a [coverage file](./coverage/lcov-report/index.html).
 
+
+#### What follows is the original Create-React-App readme:
+
 ## Notes on Building  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Many things came with it for free, including some basic scripts. The author has added `npm run coverage` which will launch jest's coverage and then (on a Windows machine) open the generated lcov report in the default browser.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Many things came with it for free, including some basic scripts. The author has added `npm run coverage` which will launch jest's coverage and, after closing the jest runner, the script will attempt to open the generated lcov report in the default browser.
 
 ## Scripts from Create-React-App
 
