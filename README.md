@@ -1,10 +1,19 @@
 # Fizz Buzz Code Challenge  
 
-This simple webpage was built in response to a coding challenge. Although it has some obvious omissions (almost no styling) it is designed to make addressing those omissions easy. The design 
+### Installation  
+This installation guide assumes that the user has already made a copy of the [git](https://git-scm.com/) repository and installed [node package manager (npm)](https://www.npmjs.com/). Once the desired branch has been pulled down, the user should  
+>`npm install`  
+  
+  To install the dependencies.
 
-It should have a compelling automated test suite, which generates that coveted 100% line coverage report.
+This simple webpage was built in response to a coding challenge. Although it has some obvious omissions (almost no styling) it is designed to make addressing those omissions easy. The design leaves space for/"mocks" an API call in the RemoteDataService. And, while the applications are rudimentary, the components attempt to be re-usable and demonstrate some rough understanding of being driven by API calls. It should be easy to imagine mocking up a more RESTful/HATEOAS design by moving [src/Constants/Path](./src/Constants/Path.js) data into the [RemoteDataService](./src/RemoteDataService/RemoteDataService.js).
 
+There are also stray console logs in [FizzBuzzEntryList.js](./src/FizzBuzzEntryList/FizzBuzzEntryList.js)
 
+It should have a compelling automated test suite, which generates that coveted 100% line coverage report. This coverage report can be generated using the 
+> `npm run test -- --coverage`  
+
+command. The coverage report should be written into a [coverage file](./coverage/lcov-report/index.html).
 
 ## Notes on Building  
 
