@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import FizzBuzz from '../AppPages/Functions/FizzBuzz';
-import { RemoteDataService } from '../DataSupply/RemoteDataService';
+import { RemoteDataService } from '../RemoteDataService/RemoteDataService';
 import { FIZZBUZZ_SHAPE } from '../Constants/PropTypeShapes';
 
 const FizzBuzzEntry = ({ index, fizzBuzzObject }) => {

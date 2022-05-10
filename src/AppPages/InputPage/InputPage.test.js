@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import { Router, MemoryRouter } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
-import { RemoteDataService } from '../../DataSupply/RemoteDataService';
+import { RemoteDataService } from '../../RemoteDataService/RemoteDataService';
 import InputPage from './InputPage';
 import { createMemoryHistory } from 'history';
 

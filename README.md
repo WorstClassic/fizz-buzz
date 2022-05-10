@@ -1,8 +1,16 @@
-# Getting Started with Create React App
+# Fizz Buzz Code Challenge  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This simple webpage was built in response to a coding challenge. Although it has some obvious omissions (almost no styling) it is designed to make addressing those omissions easy. The design 
 
-## Available Scripts
+It should have a compelling automated test suite, which generates that coveted 100% line coverage report.
+
+
+
+## Notes on Building  
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Many things came with it for free, including some basic scripts. The author has added `npm run coverage` which will launch jest's coverage and then (on a Windows machine) open the generated lcov report in the default browser.
+
+## Scripts from Create-React-App
 
 In the project directory, you can run:
 

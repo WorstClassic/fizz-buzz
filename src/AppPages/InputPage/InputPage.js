@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import GenericForm from '../../GenericForm/GenericForm';
-import { RemoteDataService } from '../../DataSupply/RemoteDataService';
+import { RemoteDataService } from '../../RemoteDataService/RemoteDataService';
 import { reviewpath } from '../../Constants/Path';
 import { STACK_PTR, SUBMIT_TEXT } from '../../Constants/variable-names';
 

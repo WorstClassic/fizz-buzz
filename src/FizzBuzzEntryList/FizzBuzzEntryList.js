@@ -26,7 +26,7 @@ const FizzBuzzEntryList = ({ sessionStorageKeys }) => {
             />);
         }
     });
-    return (<div data-testid="EntryList">
+    return (<div key={`EntryList`} data-testid="EntryList">
         {children}
     </div>);
 };

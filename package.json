@@ -16,7 +16,15 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "coverage": "react-scripts test --coverage --watchAll",
+    "postcoverage": "start ./coverage/lcov-report/index.html",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "collectCoverageFrom":[
+      "src/**/*.js",
+      "!src/index.js"
+    ]
   },
   "eslintConfig": {
     "extends": [
