@@ -6,6 +6,8 @@ This installation guide assumes that the user has already made a copy of the [gi
 
 to install the dependencies. After dependency installation, the user may run either `npm start` to run the application in development mode, or `npm run local`. Run local will download serve using npm, then build and serve on the default port (3000). A user will then need to open the application on http://localhost:3000 .
 
+## Notes on the Branch
+
 This simple webpage was built in response to a coding challenge. Although it has some obvious omissions (almost no styling) it is designed to make addressing those omissions easy. The design leaves space for/"mocks" an API call in the RemoteDataService. And, while the applications are rudimentary, the components attempt to be re-usable and demonstrate some rough understanding of being driven by API calls. It should be easy to imagine mocking up a more RESTful/HATEOAS design by moving [src/Constants/Path](./src/Constants/Path.js) data into the [RemoteDataService](./src/RemoteDataService/RemoteDataService.js).
 
 There are also stray console logs in [FizzBuzzEntryList.js](./src/FizzBuzzEntryList/FizzBuzzEntryList.js)
